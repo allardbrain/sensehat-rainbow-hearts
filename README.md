@@ -1,5 +1,5 @@
 # Rainbow Hearts
-Using your Raspberry Pi and SenseHAT, make hearts appear on the LED matrix in a variety of colors! You can clone this repo to get the project up and running in a couple minutes (see below), or follow along with the tutorial.
+Using your Raspberry Pi and SenseHAT, make hearts appear on the LED matrix in a variety of colors! You can clone this repo to get the project up and running in a couple minutes (see below), or follow along with the tutorial if you want to learn how all the parts of the code work together.
 
 ## What You Need
 This tutorial assumes you have the following:
@@ -17,8 +17,14 @@ Verify that everything is working properly
 ## Clone This Repo
 Open your Terminal or Command Prompt, and navigate to whichever directory you want this repo to be copied to (if you're not sure, you can save it in your Desktop directory).
 
-Copy and paste this into your Terminal or Command Prompt and press enter:
+For example: `cd ~/<your directory path here>` or `cd ~/Desktop`
+
+Copy and paste the command below into your Terminal or Command Prompt and press enter:
 `git clone https://github.com/allardbrain/pi-senseHAT-rainbow-hearts.git`
+
+Navigate to the `pi-senseHAT-rainbow-hearts` directory that was created when you cloned the repo.
+
+`cd pi-senseHAT-rainbow-hearts`
 
 You can now access the `hearts.py` file and run it.
 * If you're using the GUI, you can open the file with Python 3 (IDLE) and press the `F5` key to run it.
@@ -27,6 +33,6 @@ You can now access the `hearts.py` file and run it.
 
 ## Make It Your Own!
 * Change the colors of the hearts using [this guide](https://www.w3schools.com/colors/colors_picker.asp)
-* Delete or add some hearts
+* Delete or add some hearts by following the structure you see in `hearts.py`
 * Create other shapes, such as squares or triangles
 * Change the length of time that the hearts are displayed
