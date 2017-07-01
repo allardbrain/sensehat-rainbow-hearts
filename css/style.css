@@ -1,0 +1,63 @@
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.75em;
+}
+
+.well-sm {
+  font-size: 1.5em;
+}
+
+.centered-list {
+  text-align: center;
+}
+
+.glyphicon {
+  font-size: 4em;
+}
+
+#content {
+    width:800px;
+    margin:0 auto;
+    text-align:left;
+}
+
+#you-will-need {
+  text-align: center;
+}
+
+#image {
+  text-align: center;
+}
+
+#red {
+  color: red;
+}
+
+#orange{
+  color: orange;
+  font-weight: bold;
+}
+
+#yellow {
+  color: yellow;
+}
+
+#green {
+  color: green;
+}
+
+#blue {
+  color: blue;
+  font-weight: bold;
+}
+
+#purple {
+  color: purple;
+}
