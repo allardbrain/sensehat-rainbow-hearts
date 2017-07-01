@@ -1,52 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Rainbow Hearts - Raspberry Pi & SenseHAT</title>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Rainbow Hearts Prototype</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+  
+</head>
+
+<body>
   <body>
     
     <div class="jumbotron text-center">
-		<h1>Light-up Rainbow Hearts!</h1>  
+      <h1>Light-up Rainbow Hearts! </h1>
+      <span class="glyphicon glyphicon-heart" id="red" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-heart" id="orange" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-heart" id="yellow" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-heart" id="green" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-heart" id="blue" aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-heart" id="purple" aria-hidden="true"></span>
 	</div>
+  
 
 	<div class="container">
+    
 	  <div class="row">
-	    <div class="col-sm-4">
-	      <h3>Column 1</h3>
-	      <p>Lorem ipsum dolor..</p>
-	      <p>Ut enim ad..</p>
-	    </div>
-	    <div class="col-sm-4">
-	      <h3>Column 2</h3>
-	      <p>Lorem ipsum dolor..</p>
-	      <p>Ut enim ad..</p>
-	    </div>
-	    <div class="col-sm-4">
-	      <h3>Column 3</h3> 
-	      <p>Lorem ipsum dolor..</p>
-	      <p>Ut enim ad..</p>
-	    </div>
+      <div class="xs-col-12">
+        <h3>Use your Raspberry Pi and SenseHAT to display flashing, colorful hearts</h3>
+      </div>
 	  </div>
-	</div>
+    
+    <div class="row">
+          <div class="sm-col-6 xs-col-12" id="image"><br><br>
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51K53jwHU0L._SX355_.jpg"><br><br><br>
+    </div>  <!-- /class -->
+      <div class="sm-col-6 xs-col-12" id="you-will-need">
+      <h2>You will need:</h2>
+        <p class="centered-list">
+          A Raspberry Pi<br>
+          A SenseHAT, connected to your Pi's GPIO pins<br>
+          <strong>Either</strong> SSH access to your Pi<br>
+          <strong>Or</strong> a monitor connected to your Pi with an HDMI cable<br>
+            Keyboard & mouse attached to your Pi<br>
+          A power adapter<br>
+        </p>
+      </div>  <!-- /list -->
+    </div>  <!-- /class -->
+    
+	</div>  <!-- /row -->
+  <br>
+  
+  <div class="row" id="content">
+    <h2>Getting Set Up</h2>
+    <p>This tutorial assumes you've correctly attached the SenseHAT to your Raspberry Pi's GPIO pins. If the LEDs show a rainbow when you power on the Pi, you're all set. The tutorial also assumes that you can see your Desktop (if you're using a monitor) or Bash (if you're using SSH).
+    </p>
+  </div>  <!-- /row -->
+  
+  <div class="row" id="content">
+    
+    <h2>Let's Do It!</h2>
+    
+    <p>From your Terminal, navigate to the Desktop. (Remember that the dollar sign ($) is part of your Terminal; you do not need to type this in.)</p>
+    <div class="well well-sm">$ cd ~/Desktop</div>
+    
+    <p>Let's make a new directory to hold the Rainbow Hearts project, and then navigate into it:</p>
+    <div class="well well-sm">$ mkdir pi_rainbow_hearts<br>$ cd pi_rainbow_hearts</div>
+    
+    <p>To double check that we're in the right place, we can run the 'pwd' command, which will print to our screen the file path we're currently in:</p>
+    <div class="well well-sm">$ pwd <br>pi/Desktop/pi-rainbow-hearts [[[ DOUBLE CHECK THIS ]]]</div>
+    
+    <p>Now that we're in the directory for the Rainbow Hearts project, we need to create a Python file to put our code in.</p>
+    <div class="well well-sm">$ touch hearts.py</div>
+    
+    <p>Let's open this file with the Raspberry Pi's built-in Python 3 IDLE, like so:</p>
+    <div class="well well-sm">$ [[[ DOUBLE CHECK THIS ]]]</div>
+    
+    <p>Voila! Now we're ready to write some code! We need to import two modules: 1) The SenseHAT library, so we can interact with the SenseHAT, and 2) The Time library, so we can have our hearts flash on the LED matrix for a specified amount of time:</p>
+    <div class="well well-sm">
+      <em># hearts.py</em><br><br>
+      <span id="orange">from</span> sense_hat <span id="orange">import</span> SenseHat<br>
+      <span id="orange">import</span> time</div>
+    
+    <p>When we import SenseHat, as above, we are importing an "object" called SenseHat. Objects can have special functions attached to them (called "methods"), and we can use these special functions to make the objects do different things. We'll come back to this idea later. For right now, we want to save this SenseHat object as a variable so we can refer to the SenseHat object simply by using the variable name:</p>
+    <div class="well well-sm">
+      <em># hearts.py</em><br><br>
+      <span id="orange">from</span> sense_hat <span id="orange">import</span> SenseHat<br>
+      <span id="orange">import</span> time<br><br>
+    sense <span id="orange">=</span> SenseHat( )</div>
 
+    <p>Along with methods, objects can also have special characteristics which we call "attributes". For example, if we created a "Dog" object, the object might have attributes such as "breed" or "weight". We can store values inside these attributes, so in this example we could set<br> Dog.breed = "Golden Retriever"<br><br> 
+      The LEDs are quite bright, so to make them a little dimmer, we can change the SenseHat object's "low_light" attribute to True (the default is False), as shown below:</p>
+    <div class="well well-sm">
+      <em># hearts.py</em><br><br>
+      <span id="orange">from</span> sense_hat <span id="orange">import</span> SenseHat<br>
+      <span id="orange">import</span> time<br><br>
+    sense <span id="orange">=</span> SenseHat( )<br>
+      sense.low_light <span id="orange">=</span> <span id="blue">True</span></div>
+  
+  <p><em>If the topics of objects, methods and attributes are confusing right now, don't worry! You can still have fun and complete this tutorial even if you skip the stuff about objects. Keep going!</em><br><br> 
+      Alright. We've taken care of importing things and setting up our SenseHat object. Time to choose some colors using the Red-Green-Blue format!<br>
+  </p>
+    <div class="well well-sm">
+      <em># hearts.py</em><br><br>
+      <span id="orange">from</span> sense_hat <span id="orange">import</span> SenseHat<br>
+      <span id="orange">import</span> time<br><br>
+    sense <span id="orange">=</span> SenseHat( )<br>
+      sense.low_light <span id="orange">=</span> <span id="blue">True</span></div>
+</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
+</html>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  
+</body>
 </html>
