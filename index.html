@@ -13,16 +13,18 @@
 
 <body>
 
+
+    <div class="jumbotron text-center">
+        <h1>Light-up Rainbow Hearts! </h1>
+        <span class="glyphicon glyphicon-heart" id="red" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-heart" id="orange" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-heart" id="yellow" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-heart" id="green" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-heart" id="blue" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-heart" id="purple" aria-hidden="true"></span>
+    </div>  <!-- end jumbotron div-->
+
     <div class="container">
-        <div class="jumbotron text-center">
-            <h1>Light-up Rainbow Hearts! </h1>
-            <span class="glyphicon glyphicon-heart" id="red" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-heart" id="orange" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-heart" id="yellow" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-heart" id="green" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-heart" id="blue" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-heart" id="purple" aria-hidden="true"></span>
-        </div>  <!-- end jumbotron div-->
 
         <div class="row">
             <div class="xs-col-12">
@@ -76,7 +78,11 @@
 
             <div class="well well-sm">$ [[[ DOUBLE CHECK THIS ]]]</div>
 
-            <p>Voila! Now we're ready to write some code! We need to import two modules: 1) The SenseHAT library, so we can interact with the SenseHAT, and 2) The Time library, so we can have our hearts flash on the LED matrix for a specified amount of time:</p>
+            <p>Voila! Now we're ready to write some code! We need to import two modules: 1) The SenseHAT library, so we can interact with the SenseHAT, and 2) The Time library, so we can have our hearts flash on the LED matrix for a specified amount of time. 
+
+            <br><br>
+
+            Note that the # sign creates a comment in Python, and any line of code that starts with a # will not be run. Programmers use this feature to write notes about their code. Here, the note we see is just telling us which file we are in.</p>
 
             <div class="well well-sm">
                 <em># hearts.py</em>
@@ -98,7 +104,7 @@
 
             <p>Along with methods, objects can also have special characteristics which we call "attributes". For example, if we created a "Dog" object, the object might have attributes such as "breed" or "weight". We can store values inside these attributes, so in this example we could set<br> Dog.breed = "Golden Retriever"
             <br><br> 
-            The LEDs are quite bright, so to make them a little dimmer, we can change the SenseHat object's "low_light" attribute to True (the default is False), as shown below:</p>
+            Let's get back to the topic of writing Python code so we can interact with our SenseHAT. The LEDs are quite bright, so to make them a little dimmer, we can change the SenseHat object's "low_light" attribute to True (the default is False), as shown below:</p>
 
             <div class="well well-sm">
                 <em># hearts.py</em>
@@ -112,22 +118,66 @@
                 sense.low_light <span id="orange">=</span> <span id="blue">True</span>
             </div>  <!-- end well -->
 
-            <p><em>If the topics of objects, methods and attributes are confusing right now, don't worry! You can still have fun and complete this tutorial even if you skip the stuff about objects. Keep going!</em>
+            <p><em><style>font-size="1em"</style>If the topics of objects, methods and attributes are confusing right now, don't worry! You can still have fun and complete this tutorial even if you skip the stuff about objects. Keep going!</em></p>
+
             <br><br>
-            Alright. We've taken care of importing things and setting up our SenseHat object. Time to choose some colors using the Red-Green-Blue format!</p>
-            <br>
+
+            <p>Alright. We've taken care of importing things and setting up our SenseHat object. Time to choose some colors using the Red-Green-Blue (RGB) format!</p>
+
+
+            <br><br>
+            <p>RGB is a way of referring to a very specific color, by using numbers that describe the concentration of that color compared to the others available (out of red, green and blue). For example, the RGB value for red is (255, 0, 0) because we list the concentrations in (RGB) order, and each color can have a max value of 255. This means there's a 100% concentration of red and a 0% concentration of the other colors. Likewise, the color green would have an RGB value of (0, 255, 0) and the color blue would have an RGB value of (0, 0, 255). 
+
+            <br><br>
+
+            We'll be using colors from the rainbow for this tutorial. If you'd like to choose different colors, you can <a href="https://www.w3schools.com/colors/colors_rgb.asp">experiment with an RGB calculator to make custom colors</a> or <a href="https://www.w3schools.com/colors/colors_rgb.asp">copy and paste the RGB codes for some common colors</a>.
+
+            <br><br>
+
+            To use the rainbow colors, copy and paste this Python code into your hearts.py file, under the code we have already written. Remember, the lines of code that begin with the # sign will not be run. We see notes telling us what colors the RGB values will create.
 
             <div class="well well-sm">
-                <em># hearts.py</em>
+                <em># Create variables to hold each RGB color we want to use</em>
+
                 <br><br>
-                <span id="orange">from</span> sense_hat <span id="orange">import</span> SenseHat
-                <br>
-                <span id="orange">import</span> time
+                <em># red</em><br>
+                r = (255, 0, 0)
+
                 <br><br>
-                sense <span id="orange">=</span> SenseHat( )
-                <br>
-                sense.low_light <span id="orange">=</span> <span id="blue">True</span>
+                <em># pink</em><br>
+                p = (204, 0, 204)
+
+                <br><br>
+                <em># orange</em><br>
+                o = (255, 128, 0)
+
+                <br><br>
+                <em># yellow</em><br>
+                y = (255, 255, 0)
+
+                <br><br>
+                <em># green</em><br>
+                g = (0, 255, 0)
+
+                <br><br>
+                <em># aqua</em><br>
+                a = (0, 255, 255)
+
+                <br><br>
+                <em># blue</em><br>
+                b = (0, 0, 255)
+
+                <br><br>
+                <em># purple</em><br>
+                pr = (128, 0, 255)
+
+                <br><br>
+                <em># empty (no color)</em><br>
+                e = (0, 0, 0)
             </div>  <!-- end well -->
+
+
+
         </div>  <!-- end row class and content id -->
     </div>  <!-- end container -->
 
