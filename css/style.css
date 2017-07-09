@@ -6,12 +6,24 @@ h3 {
   text-align: center;
 }
 
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+li {
+  font-size: 1.25em;
+  color: blue;
+}
+
 p {
   font-size: 1.25em;
 }
 
 .well-sm {
   font-size: 1em;
+  font-family: monospace;
 }
 
 .centered-list {
@@ -38,19 +50,23 @@ p {
 
 #red {
   color: red;
+  font-weight: bold;
 }
 
 #orange{
   color: orange;
   font-weight: bold;
+  font-weight: bold;
 }
 
 #yellow {
   color: yellow;
+  font-weight: bold;
 }
 
 #green {
   color: green;
+  font-weight: bold;
 }
 
 #blue {
@@ -60,4 +76,5 @@ p {
 
 #purple {
   color: purple;
+  font-weight: bold;
 }
