@@ -78,11 +78,9 @@
 
             <div class="well well-sm">$ [[[ DOUBLE CHECK THIS ]]]</div>
 
-            <p>Voila! Now we're ready to write some code! We need to import two modules: 1) The SenseHAT library, so we can interact with the SenseHAT, and 2) The Time library, so we can have our hearts flash on the LED matrix for a specified amount of time. 
+            <p>Voila! Now we're ready to write some code! We need to import two modules: 1) The SenseHAT library, so we can interact with the SenseHAT, and 2) The Time library, so we can have our hearts flash on the LED matrix for a specified amount of time: </p>
 
-            <br><br>
-
-            Note that the # sign creates a comment in Python, and any line of code that starts with a # will not be run. Programmers use this feature to write notes about their code. Here, the note we see is just telling us which file we are in.</p>
+            <br>
 
             <div class="well well-sm">
                 <em># hearts.py</em>
@@ -90,6 +88,10 @@
                 <span id="orange">from</span> sense_hat <span id="orange">import</span> SenseHat<br>
                 <span id="orange">import</span> time
             </div>  <!-- end well -->
+
+            <p>Note that the # sign creates a comment in Python, and any line of code that starts with a # will not be run. Programmers use this feature to write notes about their code. Here, the note we see is just telling us which file we are in.
+
+            <br><br>
 
             <p>When we import SenseHat, as above, we are importing an "object" called SenseHat. Objects can have special functions attached to them (called "methods"), and we can use these special functions to make the objects do different things. We'll come back to this idea later. For right now, we want to save this SenseHat object as a variable so we can refer to the SenseHat object simply by using the variable name:</p>
 
@@ -120,13 +122,17 @@
 
             <p><em><style>font-size="1em"</style>If the topics of objects, methods and attributes are confusing right now, don't worry! You can still have fun and complete this tutorial even if you skip the stuff about objects. Keep going!</em></p>
 
-            <br><br>
+            <br>
+
+            <h3>Choose Colors for Your Hearts</h3>
+
+            <br>
 
             <p>Alright. We've taken care of importing things and setting up our SenseHat object. Time to choose some colors using the Red-Green-Blue (RGB) format!</p>
 
+            <br>
 
-            <br><br>
-            <p>RGB is a way of referring to colors which have been created by mixing very specific quantities of red, green and blue. Each color (red, green or blue) can have a quantity, or concentration, of up to 255. For example, the RGB value for red is (255, 0, 0) because we list the concentrations in (RGB) order, and pure red will have no green or blue in it. This means there's a 100% concentration of red and a 0% concentration of the other colors. Likewise, the color green would have an RGB value of (0, 255, 0) and the color blue would have an RGB value of (0, 0, 255). 
+            <p>RGB is a way of creating colors by mixing very specific quantities of red, green and blue. Each color (red, green or blue) can have a quantity, or concentration, of up to 255. For example, the RGB value for <span id="red">red</span> is (255, 0, 0) because we list the concentrations in (RGB) order, and pure red will have no green or blue in it. This means there's a 100% concentration of red and a 0% concentration of the other colors. Likewise, the color <span id="green">green</span> would have an RGB value of (0, 255, 0) and the color <span id="blue">blue</span> would have an RGB value of (0, 0, 255). 
 
             <br><br>
 
@@ -134,7 +140,7 @@
 
             <br><br>
 
-            To use the rainbow colors, copy and paste this Python code into your <em>hearts.py</em> file, under the code we have already written. Remember, the lines of code that begin with the # sign will not be run. We're using this feature to make a note of what colors the RGB values will create.
+            To use the rainbow colors, copy and paste this Python code into your <em>hearts.py</em> file, <strong>under the code we have already written.</strong> Remember, the lines of code that begin with the # sign will not be run. It's considered good practice in the programming world to use enough comments so that someone else reading your code will be able easily figure out what you are trying to do. So, we're using comments to make a note of what colors the RGB values will create.
 
             <div class="well well-sm">
                 <em># Create variables to hold each RGB color we want to use</em>
@@ -174,8 +180,110 @@
                 <br><br>
                 <em># empty (no color)</em><br>
                 e = (0, 0, 0)
+
             </div>  <!-- end well -->
 
+            <p>In the code above, we are creating a new and unique variable name for each color. To keep our variable names short, we are using just the first letter of each color (with the exception of purple, because the color pink already took the "p"). Each variable stores that color's RGB value as a tuple.  
+
+            <br><br>
+
+            A tuple is a way to store several different pieces of data as one. Python knows we're using a tuple because tuples start and end with parentheses, and contain more than one thing inside. (Even though we may see one RGB value, this RGB value is made up of 3 separate integers, each separated by commas.) When we store data in tuples, we have to separate each data point with a comma. You can read more about tuples <a href="https://www.tutorialspoint.com/python/python_tuples.htm" target="_blank">here</a> if you're curious about how they work.</p>
+
+            <br><br>
+
+            <h3>Tell the LEDs How to Light Up</h3>
+
+            <br><br>
+
+            <p>The SenseHAT's LED matrix forms a square with 8 LEDs on each side, for 64 LEDs total. This 8x8 grid is the geometric space we have to work with for making the hearts appear.</p>
+
+            <br><br>
+
+            <img src="images/led_layout.jpeg">
+
+            <br>
+
+            <p>Each time we want to show something on the LED matrix, we have to tell the LED matrix which (if any) of the 64 LEDs should light up, and what color they should be. In other words, we have to specify one-by-one which of the 64 tiny LEDs should light up.
+
+            <br><br>
+
+            The way we do this is with a list that contains 64 values inside of it -- one value per LED! Now, just observe the following code snippet (don't put this into <em> hearts.py</em>.) We could code a Python list with 64 values in it like this:</p>
+            
+            <div class="well well-sm">
+                <strong>led_list</strong> <span id="orange">=</span> [o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o] 
+            </div>  <!-- end well -->
+
+            <br>
+
+            <p>But this way of doing it would make it hard to see at a glance what our picture would turn out like, because the data telling which LEDs to light up is basically in one straight line. This is fine for the computer, but not so friendly for humans.
+
+            <br><br>
+
+            Luckily, Python allows us to break up the values in a list into a format that is more human-readable. Again, just observe the following code; don't write this code yet. We can code the list as 8 rows of 8 values, like this:</p>
+
+            <div class="well well-sm">
+                <strong>led_list</strong> <span id="orange">=</span> [<br>
+                o, o, o, o, o, o, o, o,<br>
+                o, o, o, o, o, o, o, o,<br>
+                o, o, o, o, o, o, o, o,<br>
+                o, o, o, o, o, o, o, o,<br>
+                o, o, o, o, o, o, o, o,<br>
+                o, o, o, o, o, o, o, o,<br>
+                o, o, o, o, o, o, o, o,<br>
+                o, o, o, o, o, o, o, o<br>
+                ] 
+            </div>  <!-- end well -->
+
+            <p>That is so much easier to read AND we'll get a better idea of the picture that is taking shape on the LED matrix, since the shape of the list resembles the surface area made by the 64 LEDs.
+
+            <br><br>
+
+            Before we go any further, we need to figure out which values in this list are going to tell the LEDs to light up, and which values in this list are going to tell the LEDs <strong>not</strong> to light up. An easy and fun way to plan your image is to simply color in squares on an 8x8 grid, like so:<p>
+
+            <br>
+
+            <img src="images/heart.jpeg">
+
+            <br>
+
+            <p>We can now create a variable that will hold a list, and this list will hold the 64 LED values just as we saw above. Looking back to the code you wrote in your <em>hearts.py</em> file which assigned RGB values to different variables, we see that the variable "e" means "empty" (or no color) and the variable "r" means "red". 
+
+            <br><br>
+
+            So, anywhere in our list where we want an LED to <strong>not</strong> turn on, we type "e". And anywhere in our list where we want an LED to turn on, we type the letter of the variable that contains the color we want to display. Here is what the code looks like for creating a variable called "red_heart" that stores the LED values following the sketch above:</p>
+
+            <br>
+
+            <div class="well well-sm">
+                <strong>red_heart</strong> <span id="orange">=</span> [<br>
+                e, e, e, e, e, e, e, e,<br>
+                e, r, r, e, r, r, e, e,<br>
+                r, r, r, r, r, r, r, e,<br>
+                r, r, r, r, r, r, r, e,<br>
+                r, r, r, r, r, r, r, e,<br>
+                e, r, r, r, r, r, e, e,<br>
+                e, e, r, r, r, e, e, e,<br>
+                e, e, e, r, e, e, e, e<br>
+                ] 
+            </div>  <!-- end well -->
+
+            <p>Take a minute to walk through both the grid with the heart in it and the <em>red_heart</em> list. Notice that each blank space in the grid is represented by an "e" in the <em>red_heart</em> list, and each red space in the grid is represented by an "r" in the <em>red_heart</em> list. Notably, the entire top row and the entire far-right column are both empty, meaning none of those LEDs will light up.
+
+            <br><br>
+
+            Time to code the variables for the rest of our colors! Using the <em>red_hearts</em> list as a guide, create a new variable for each heart color you want to display on your LED matrix. Here are some things to keep in mind, especially if you are going to copy and paste:</p>
+
+            <br>
+
+            <ul>
+                <li>Every variable needs to have a unique name. Use the example for reference.</li>
+                <li>The color in the variable name should match the color represented in your list.</li>
+                <li>Ensure that every non-empty value in your list is for the same color. (ie: Be careful you don't miss a value, and wind up with a red heart that has one blue spot!)</li>
+            </ul>
+
+            <br>
+
+            <p>If you get stuck, you can view the code <a href="https://github.com/allardbrain/sensehat-rainbow-hearts/blob/master/hearts.py">here</a>.</p>
 
 
         </div>  <!-- end row class and content id -->
