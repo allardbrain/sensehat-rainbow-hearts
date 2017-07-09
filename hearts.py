@@ -1,6 +1,12 @@
 from sense_hat import SenseHat
 import time
 
+# Create a sense object
+sense = SenseHat()
+    
+# Reduce the brightness of the LED display
+sense.low_light = True
+
 # Create variables to hold each RGB color we want to use
 r = (255, 0, 0)     # red 
 p = (204, 0, 204)   # pink
@@ -106,12 +112,6 @@ heart_colors = [red_heart, pink_heart, orange_heart, yellow_heart,
                 green_heart, aqua_heart, blue_heart, purple_heart]
 
 def rainbow_hearts():
-
-    # Create a sense object
-    sense = SenseHat()
-        
-    # Reduce the brightness of the LED display
-    sense.low_light = True
 
     for color in heart_colors:
         sense.set_pixels(color)
