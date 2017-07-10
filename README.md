@@ -1,5 +1,5 @@
 # Rainbow Hearts
-Using your Raspberry Pi and SenseHAT, make hearts appear on the LED matrix in a variety of colors! You can clone this repo to get the project up and running in a couple minutes (see below), or follow along with (the tutorial)[https://allardbrain.github.io/sensehat-rainbow-hearts/] if you want to learn how all the parts of the code work together.
+Using your Raspberry Pi and SenseHAT, make hearts appear on the LED matrix in a variety of colors! You can clone this repo to get the project up and running in a couple minutes (see below), or follow along with [the tutorial](https://allardbrain.github.io/sensehat-rainbow-hearts/) if you want to learn how all the parts of the code work together.
 
 ## What You Need
 To make the file run and/or to complete the tutorial, you should have the following:
