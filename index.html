@@ -283,7 +283,111 @@
 
             <br>
 
-            <p>If you get stuck, you can view the code <a href="https://github.com/allardbrain/sensehat-rainbow-hearts/blob/master/hearts.py">here</a>.</p>
+            <p>If you get stuck, you can view the sample code <a href="https://github.com/allardbrain/sensehat-rainbow-hearts/blob/master/hearts.py">here</a>, which contains all the colors of the rainbow.
+
+            <br><br>
+
+            Your hearts.py file should now look similar to this:
+
+            <br>
+
+            <div class="well well-sm">
+                <em># hearts.py</em>
+                <br><br>
+                <span id="orange">from</span> sense_hat <span id="orange">import</span> SenseHat
+                <br>
+                <span id="orange">import</span> time
+                <br><br>
+                sense <span id="orange">=</span> SenseHat( )
+                <br>
+                sense.low_light <span id="orange">=</span> <span id="blue">True</span>
+
+                <br><br>
+
+                <em># Create variables to hold each RGB color we want to use</em>
+
+                <br><br>
+
+                <em># red</em><br>
+                r = (255, 0, 0)
+
+                <br><br>
+                <em># pink</em><br>
+                p = (204, 0, 204)
+
+                <br><br>
+                <em># orange</em><br>
+                o = (255, 128, 0)
+
+                <br><br>
+                <em># yellow</em><br>
+                y = (255, 255, 0)
+
+                <br><br>
+                <em># green</em><br>
+                g = (0, 255, 0)
+
+                <br><br>
+                <em># aqua</em><br>
+                a = (0, 255, 255)
+
+                <br><br>
+                <em># blue</em><br>
+                b = (0, 0, 255)
+
+                <br><br>
+                <em># purple</em><br>
+                pr = (128, 0, 255)
+
+                <br><br>
+                <em># empty (no color)</em><br>
+                e = (0, 0, 0)
+
+                <br><br>
+
+                <strong>red_heart</strong><span id="orange"> =</span> [<br>
+                e, e, e, e, e, e, e, e,<br>
+                e, r, r, e, r, r, e, e,<br>
+                r, r, r, r, r, r, r, e,<br>
+                r, r, r, r, r, r, r, e,<br>
+                r, r, r, r, r, r, r, e,<br>
+                e, r, r, r, r, r, e, e,<br>
+                e, e, r, r, r, e, e, e,<br>
+                e, e, e, r, e, e, e, e<br>
+                ]<br><br>
+
+                <strong>pink_heart</strong><span id="orange"> =</span> [<br>
+                 e, e, e, e, e, e, e, e,<br>
+                 e, p, p, e, p, p, e, e,<br>
+                 p, p, p, p, p, p, p, e,<br>
+                 p, p, p, p, p, p, p, e,<br>
+                 p, p, p, p, p, p, p, e,<br>
+                 e, p, p, p, p, p, e, e,<br>
+                 e, e, p, p, p, e, e, e,<br>
+                 e, e, e, p, e, e, e, e<br>
+                 ]<br><br>
+
+                <strong>orange_heart</strong><span id="orange"> =</span> [<br>
+                     e, e, e, e, e, e, e, e,<br>
+                     e, o, o, e, o, o, e, e,<br>
+                     o, o, o, o, o, o, o, e,<br>
+                     o, o, o, o, o, o, o, e,<br>
+                     o, o, o, o, o, o, o, e,<br>
+                     e, o, o, o, o, o, e, e,<br>
+                     e, e, o, o, o, e, e, e,<br>
+                     e, e, e, o, e, e, e, e<br>
+                     ]<br><br>
+            </div>  <!-- end well -->
+
+            </p>
+
+            <br><br>
+
+            <h3>Making the LEDs light up</h3>
+
+            <br><br>
+
+
 
 
         </div>  <!-- end row class and content id -->
