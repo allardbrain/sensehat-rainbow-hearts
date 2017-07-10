@@ -20,17 +20,32 @@ p {
   font-size: 1.25em;
 }
 
+.centered-list {
+  text-align: center;
+}
+
+.double-tab {
+  margin-left: 80px;
+  font-size: 1em;
+}
+
+.glyphicon {
+  font-size: 4em;
+}
+
+.tab {
+  margin-left: 40px;
+  font-size: 1em;
+}
+
 .well-sm {
   font-size: 1em;
   font-family: monospace;
 }
 
-.centered-list {
-  text-align: center;
-}
-
-.glyphicon {
-  font-size: 4em;
+#blue {
+  color: blue;
+  font-weight: bold;
 }
 
 #content {
@@ -39,17 +54,13 @@ p {
     text-align:left;
 }
 
-#you-will-need {
-  text-align: center;
+#green {
+  color: green;
+  font-weight: bold;
 }
 
 #image {
   text-align: center;
-}
-
-#red {
-  color: red;
-  font-weight: bold;
 }
 
 #orange{
@@ -58,22 +69,21 @@ p {
   font-weight: bold;
 }
 
+#purple {
+  color: purple;
+  font-weight: bold;
+}
+
+#red {
+  color: red;
+  font-weight: bold;
+}
+
 #yellow {
   color: yellow;
   font-weight: bold;
 }
 
-#green {
-  color: green;
-  font-weight: bold;
-}
-
-#blue {
-  color: blue;
-  font-weight: bold;
-}
-
-#purple {
-  color: purple;
-  font-weight: bold;
+#you-will-need {
+  text-align: center;
 }
