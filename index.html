@@ -283,11 +283,11 @@
 
             <br>
 
-            <p>If you get stuck, you can view the sample code <a href="https://github.com/allardbrain/sensehat-rainbow-hearts/blob/master/hearts.py">here</a>, which contains all the colors of the rainbow.
+            <p>If you get stuck, you can view the sample code <a href="https://github.com/allardbrain/sensehat-rainbow-hearts/blob/master/hearts.py" target="_blank">here</a>, which contains all the colors of the rainbow.
 
             <br><br>
 
-            Your hearts.py file should now look similar to this:
+            Your hearts.py file should now look similar to this:</p>
 
             <br>
 
@@ -368,25 +368,54 @@
                  ]<br><br>
 
                 <strong>orange_heart</strong><span id="orange"> =</span> [<br>
-                     e, e, e, e, e, e, e, e,<br>
-                     e, o, o, e, o, o, e, e,<br>
-                     o, o, o, o, o, o, o, e,<br>
-                     o, o, o, o, o, o, o, e,<br>
-                     o, o, o, o, o, o, o, e,<br>
-                     e, o, o, o, o, o, e, e,<br>
-                     e, e, o, o, o, e, e, e,<br>
-                     e, e, e, o, e, e, e, e<br>
-                     ]<br><br>
+                 e, e, e, e, e, e, e, e,<br>
+                 e, o, o, e, o, o, e, e,<br>
+                 o, o, o, o, o, o, o, e,<br>
+                 o, o, o, o, o, o, o, e,<br>
+                 o, o, o, o, o, o, o, e,<br>
+                 e, o, o, o, o, o, e, e,<br>
+                 e, e, o, o, o, e, e, e,<br>
+                 e, e, e, o, e, e, e, e<br>
+                 ]<br><br>
             </div>  <!-- end well -->
 
-            </p>
+            <br><br>
+
+            <h3>Making the LEDs Light Up</h3>
+
+            <br>
+
+            <p>We've done a lot of prep work, and now we're in the home stretch! It's time to make our SenseHAT light up!
 
             <br><br>
 
-            <h3>Making the LEDs light up</h3>
+            One strategy we could use is to loop through all of our <em>&lt;color&gt;_heart</em> variables (which hold the data about which LEDs to turn on) and have each heart light up one by one. To do this, we need to create a new variable that's going to hold a list of all of the <em>&lt;color&gt;_heart</em> variables inside. 
 
             <br><br>
 
+            Add the following code underneath the other code you have in your <em>hearts.py</em> file, making sure to replace the sample variable names with your own variable names, if the variable names you have chosen for each of your hearts are different than what is shown below. <em>[Note: There are more colors used in the <a href="https://github.com/allardbrain/sensehat-rainbow-hearts/blob/master/hearts.py" target="_blank">full sample code</a>. The colors below refer only to the colors demonstrated in this tutorial.]</em></p>
+
+            <br>
+
+            <div class="well well-sm">
+                <strong>heart_colors</strong><span id="orange"> = </span>[red_heart, pink_heart, orange_heart]<br>
+
+            </div>  <!-- end well -->
+
+            <br>
+
+            <p>Next, we need to write a function that can loop through the items in the <em>heart_colors</em> list, and flash them on the SenseHAT's LED maxtrix one-by-one. Type the following code at the bottom of your <em>hearts.py</em> file. In the next section, we'll walk through what each line of code is doing.</p>
+
+            <br>
+
+            <div class="well well-sm">
+                <strong>def <span id="red">rainbow_hearts</span></strong>():
+                <p class="tab"><strong><span id="orange">for</span></strong> color <strong><span id="blue">in</span></strong> heart_colors:</p>
+                    <p class="double-tab">sense.set_pixels(color)<br>
+                    time.sleep(1)<br></p>
+                <p class="tab"><em># Clear the LED display</em><br>
+                sense.clear()</p>
+            </div>  <!-- end well -->
 
 
 
