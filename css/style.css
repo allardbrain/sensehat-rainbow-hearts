@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 h2 {
   text-align: center;
 }
@@ -31,6 +35,16 @@ p {
 
 .glyphicon {
   font-size: 4em;
+}
+
+.nav>li>a {
+  color: #c51a4a;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #c51a4a;
+    color: white;
 }
 
 .tab {
@@ -77,6 +91,10 @@ p {
 #red {
   color: red;
   font-weight: bold;
+}
+
+#nav {
+  background-color: #F5F5F5;
 }
 
 #yellow {
