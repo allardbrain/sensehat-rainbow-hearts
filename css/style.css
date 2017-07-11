@@ -2,6 +2,10 @@ body {
     position: relative;
 }
 
+h1 {
+  text-align: center;
+}
+
 h2 {
   text-align: center;
 }
@@ -37,6 +41,16 @@ p {
   font-size: 4em;
 }
 
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url("../images/background.png");
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #c51a4a;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
 .nav>li>a {
   color: #c51a4a;
 }
@@ -45,6 +59,11 @@ p {
     text-decoration: none;
     background-color: #c51a4a;
     color: white;
+}
+
+.navbar-inverse {
+    background-color: #c51a4a;
+    border-color: #c51a4a;
 }
 
 .tab {
