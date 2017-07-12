@@ -15,7 +15,9 @@
 <body data-spy="scroll" data-target=".scrollspy">
 
     <div class="jumbotron text-center">
-        <h1>Test</h1>
+        <h1>Scientific Computing <br>
+        & Physics Experiments</h1>
+        <h2>using the RaspberryPi & SenseHAT</h2>
     </div>  <!-- end jumbotron div-->
 
     <nav class="navbar navbar-default navbar-static-top navbar-inverse">
@@ -48,15 +50,10 @@
                   </ul>
                 </li>
               </ul>
-              <form class="navbar-form navbar-left">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-              </form>
+
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Link</a></li>
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
@@ -65,10 +62,16 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="#">Separated link</a></li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </div><!-- /.navbar-collapse -->
         </div>  <!-- /.container-fluid -->
+    </nav>
+
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <p class="text-muted" id="center">Raspberry Pi is a trademark of the Raspberry Pi Foundation.</p>
+        </div>
     </nav>
 
     <div class="col-md-3 scrollspy" id="sidebar">
@@ -112,11 +115,10 @@
         <br>
 
         <div class="row" id="content">
-            <h3>Getting Set Up</h3>
-            <p>This tutorial assumes you've correctly attached the SenseHAT to your Raspberry Pi's GPIO pins. If the LEDs show a rainbow when you power on the Pi, you're all set. The tutorial also assumes that you can see your Desktop (if you're using a monitor) or Bash (if you're using SSH).</p>
-        </div>  <!-- end "Getting Set Up" row -->
 
-        <div class="row" id="content">
+            <h3>Getting Set Up</h3>
+                <p>This tutorial assumes you've correctly attached the SenseHAT to your Raspberry Pi's GPIO pins. If the LEDs show a rainbow when you power on the Pi, you're all set. The tutorial also assumes that you can see your Desktop (if you're using a monitor) or Bash (if you're using SSH).</p>
+
             <h3>Let's Start Coding!</h3>
             <p>From your Terminal, navigate to the Desktop. (Remember that the dollar sign ($) is part of your Terminal; you do not need to type this in.)</p>
 
@@ -511,6 +513,7 @@
             </div>  <!-- end well -->
 
         </div>  <!-- end row class and content id -->
+
     </div>  <!-- end container -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
