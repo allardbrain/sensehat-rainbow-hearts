@@ -10,6 +10,11 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <script type="text/javascript">
+        $("#nav").affix({offset: {top: $("#test").outerHeight(true)} });
+    </script>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".scrollspy">
@@ -68,14 +73,14 @@
         </div>  <!-- /.container-fluid -->
     </nav>
 
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-default navbar-static-top second-navbar">
         <div class="container-fluid">
             <p class="text-muted" id="center">Raspberry Pi is a trademark of the Raspberry Pi Foundation.</p>
         </div>
     </nav>
 
-    <div class="col-md-3 scrollspy" id="sidebar">
-        <ul class="nav nav-pills nav-stacked hidden-sm hidden-xs" id="nav" data-spy="affix">
+    <div class="col-md-2" id="sidebar">
+        <ul class="nav nav-pills nav-stacked hidden-sm hidden-xs" id="nav" data-spy="affix" data-offset-top="400">
             <li role="presentation"><a href="#things-you-need">Things You Need</a></li>
             <li role="presentation"><a href="#getting-set-up">Getting Set Up</a></li>
             <li role="presentation"><a href="#lets-start-coding">Let's Start Coding!</a></li>
