@@ -10,14 +10,10 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <script type="text/javascript">
-        $("#nav").affix({offset: {top: $("#test").outerHeight(true)} });
-    </script>
-
 
 </head>
 
-<body data-spy="scroll" data-target=".scrollspy">
+<body>
 
     <div class="jumbotron text-center">
         <h1>Scientific Computing <br>
@@ -80,7 +76,7 @@
     </nav>
 
     <div class="col-md-2" id="sidebar">
-        <ul class="nav nav-pills nav-stacked hidden-sm hidden-xs" id="nav" data-spy="affix" data-offset-top="400">
+        <ul class="nav nav-pills nav-stacked hidden-sm hidden-xs" id="nav">
             <li role="presentation"><a href="#things-you-need">Things You Need</a></li>
             <li role="presentation"><a href="#getting-set-up">Getting Set Up</a></li>
             <li role="presentation"><a href="#lets-start-coding">Let's Start Coding!</a></li>
@@ -106,7 +102,7 @@
             </div>  <!-- end image div -->
 
             <div class="sm-col-6 xs-col-12" id="you-will-need">
-                <h3>Things You Need</h3>
+                <h3 id="things-you-need">Things You Need</h3>
                 <p class="centered-list">
                 A Raspberry Pi<br>
                 A SenseHAT, connected to your Pi's GPIO pins<br>
@@ -121,10 +117,10 @@
 
         <div class="row" id="content">
 
-            <h3>Getting Set Up</h3>
+            <h3 id="getting-set-up">Getting Set Up</h3>
                 <p>This tutorial assumes you've correctly attached the SenseHAT to your Raspberry Pi's GPIO pins. If the LEDs show a rainbow when you power on the Pi, you're all set. The tutorial also assumes that you can see your Desktop (if you're using a monitor) or Bash (if you're using SSH).</p>
 
-            <h3>Let's Start Coding!</h3>
+            <h3 id="lets-start-coding">Let's Start Coding!</h3>
             <p>From your Terminal, navigate to the Desktop. (Remember that the dollar sign ($) is part of your Terminal; you do not need to type this in.)</p>
 
             <div class="well well-sm">$ cd ~/Desktop</div>
@@ -191,7 +187,7 @@
 
             <br>
 
-            <h3>Choose Your Colors</h3>
+            <h3 id="choose-your-colors">Choose Your Colors</h3>
 
             <br>
 
@@ -258,7 +254,7 @@
 
             <br><br>
 
-            <h3>Prepare the LEDs</h3>
+            <h3 id="prepare-the-leds">Prepare the LEDs</h3>
 
             <br><br>
 
@@ -448,7 +444,7 @@
 
             <br><br>
 
-            <h3>Lighting Up the LEDs</h3>
+            <h3 id="lighting-up-the-leds">Lighting Up the LEDs</h3>
 
             <br>
 
@@ -506,7 +502,7 @@
 
             <br>
 
-            <h3>Run Your File</h3>
+            <h3 id="run-your-file">Run Your File</h3>
 
             <br>
 
