@@ -78,6 +78,7 @@
         <ul class="nav nav-pills nav-stacked hidden-sm hidden-xs" id="nav">
             <li role="presentation"><a href="#things-you-need">Things You Need</a></li>
             <li role="presentation"><a href="#getting-set-up">Getting Set Up</a></li>
+            <li role="presentation"><a href="#resources">Resources</a></li>
             <li role="presentation"><a href="#lets-start-coding">Let's Start Coding!</a></li>
             <li role="presentation"><a href="#choose-your-colors">Choose Your Colors</a></li>
             <li role="presentation"><a href="#prepare-the-leds">Prepare the LEDs</a></li>
@@ -113,7 +114,20 @@
         <div class="row" id="content">
 
             <h3 id="getting-set-up">Getting Set Up</h3>
-                <p>This tutorial assumes you've correctly attached the SenseHAT to your Raspberry Pi's GPIO pins. If the LEDs show a rainbow when you power on the Pi, you're all set. The tutorial also assumes that you can see your Desktop (if you're using a monitor) or Bash (if you're using SSH).</p>
+            
+            <p>This tutorial assumes you've correctly attached the SenseHAT to your Raspberry Pi's GPIO pins. If the LEDs show a rainbow when you power on the Pi, you're all set. The tutorial also assumes that you can see your Desktop (if you're using a monitor) or Bash (if you're using SSH).</p>
+
+            <br>
+
+            <h3 id="resources">Resources</h3>
+
+            <p>Here are links to useful resources for this project. You might want to open each one in a new tab, so you can refer to them later as you're working through this tutorial.
+                <ul>
+                    <li>SenseHAT documenation - <a href="https://pythonhosted.org/sense-hat">Main Page: Installation & Basic Usage</a></li>
+                    <li>SenseHAT documenation - <a href="https://pythonhosted.org/sense-hat/api/">API Reference: Interacting with the SenseHAT</a></li>
+                </ul>
+            </p>
+
 
             <br>
 
@@ -168,8 +182,14 @@
                 sense <span id="orange">=</span> SenseHat( )
             </div>  <!-- end well -->
 
-            <p>Along with methods, objects can also have special characteristics which we call "attributes". For example, if we created a "Dog" object, the object might have attributes such as "breed" or "weight". We can store values inside these attributes, so in this example we could set<br> Dog.breed = "Golden Retriever"
+            <p>If you're curious about how or why we begin our file this way, have a look at the <a href="https://pythonhosted.org/sense-hat">quick set-up guide</a> the Raspberry Pi Foundation provides for the SenseHAT.
+
+            <br><br>
+
+            Along with methods, objects can also have special characteristics which we call "attributes". For example, if we created a "Dog" object, the object might have attributes such as "breed" or "weight". We can store values inside these attributes, so in this example we could set<br> Dog.breed = "Golden Retriever"
+
             <br><br> 
+
             Let's get back to the topic of writing Python code so we can interact with our SenseHAT. The LEDs are quite bright, so to make them a little dimmer, we can change the SenseHat object's "low_light" attribute to True (the default is False), as shown below:</p>
 
             <div class="well well-sm">
@@ -184,7 +204,11 @@
                 sense.low_light <span id="orange">=</span> <span id="blue">True</span>
             </div>  <!-- end well -->
 
-            <p>Now's a good time to save your file.</p>
+            <p>How do we know we can change the brightness of the LEDs? Are there any other things about the SenseHAT we could change or customize? For answers to these questions, browse the <a href="https://pythonhosted.org/sense-hat/api/">SenseHAT API documentation</a>!
+
+            <br><br>
+
+            Now's a good time to save your file.</p>
 
             <p><em><style>font-size="1em"</style>If the topics of objects, methods and attributes are confusing right now, don't worry! You can still have fun and complete this tutorial even if you skip the stuff about objects. Keep going!</em></p>
 
