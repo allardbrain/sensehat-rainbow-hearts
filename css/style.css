@@ -12,6 +12,7 @@ h2 {
 
 h3 {
   text-align: center;
+  color: #c51a4a;
 }
 
 img {
@@ -35,6 +36,10 @@ p {
 .double-tab {
   margin-left: 80px;
   font-size: 1em;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background-color: #6cc04a;
 }
 
 .glyphicon {
@@ -62,6 +67,10 @@ p {
     color: white;
 }
 
+.navbar {
+  margin-bottom: 5px
+}
+
 .navbar-inverse {
     background-color: #c51a4a;
     border-color: #c51a4a;
@@ -83,6 +92,10 @@ p {
 .well-sm {
   font-size: 1em;
   font-family: monospace;
+}
+
+#black {
+  color: black;
 }
 
 #blue {
@@ -124,6 +137,10 @@ p {
 #red {
   color: red;
   font-weight: bold;
+}
+
+#highlight {
+  background-color: #FFFF99;
 }
 
 #nav {
