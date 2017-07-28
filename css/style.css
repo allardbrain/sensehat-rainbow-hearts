@@ -89,6 +89,10 @@ p {
   font-size: 1em;
 }
 
+.text-muted {
+  color: white;
+}
+
 .well-sm {
   font-size: 1em;
   font-family: monospace;
