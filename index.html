@@ -20,7 +20,7 @@
         <h2>using the RaspberryPi & SenseHAT</h2>
     </div>  <!-- end jumbotron div-->
 
-    <nav class="navbar navbar-default navbar-static-top navbar-inverse"> 
+    <nav class="navbar navbar-default navbar-static-top navbar-inverse">
 <!--     class="navbar navbar-default navbar-static-top second-navbar"
  -->        <div class="container-fluid">
             <p class="text-muted" id="center">Raspberry Pi is a trademark of the Raspberry Pi Foundation.</p>
@@ -43,7 +43,7 @@
     <div class="container">
 
         <div class="row">
-            
+
             <div class="sm-col-6 xs-col-12" id="image"><br><br>
             <h1>Light-up Rainbow Hearts</h1>
             <h3 id="black">Use your Raspberry Pi and SenseHAT to display flashing, colorful hearts</h3>
@@ -55,8 +55,7 @@
                 <p class="centered-list">
                 A Raspberry Pi<br>
                 A SenseHAT, connected to your Pi's GPIO pins<br>
-                <strong>Either</strong> SSH access to your Pi<br>
-                <strong>Or</strong> a monitor connected to your Pi with an HDMI cable<br>
+                A monitor connected to your Pi with an HDMI cable<br>
                 Keyboard & mouse attached to your Pi<br>
                 A power adapter<br></p>
             </div>  <!-- end "you will need" section -->
@@ -67,7 +66,7 @@
         <div class="row" id="content">
 
             <h3 id="getting-set-up">Getting Set Up</h3>
-            
+
             <p>This tutorial assumes you've correctly attached the SenseHAT to your Raspberry Pi's GPIO pins. If the LEDs show a rainbow when you power on the Pi, you're all set. The tutorial also assumes that you can see your Desktop (if you're using a monitor) or Bash (if you're using SSH).</p>
 
             <br>
@@ -87,7 +86,7 @@
             <br>
 
             <h3 id="lets-start-coding">Let's Start Coding!</h3>
-            <p>From your Terminal, navigate to the Desktop. (Remember that the dollar sign (<strong>$</strong>) is part of your Terminal; you do not need to type this in.)</p>
+            <p>Open your Terminal. If you're using your RaspberryPi from a Desktop, click the icon in the top menu bar that looks like a black box. If you're accessing your RaspberryPi via SSH, you are already in the Terminal. From your Terminal, navigate to the Desktop by typing the following command. (Remember that the dollar sign (<strong>$</strong>) is part of your Terminal; you do not need to type this in.)</p>
 
             <div class="well well-sm">
                 <strong>$</strong> cd ~/Desktop
@@ -103,17 +102,46 @@
 
             <p>To double check that we're in the right place, we can run the <span id="highlight">pwd</span> command, which will print to our screen the file path we're currently in:</p>
 
-            <div class="well well-sm"><strong>$</strong> pwd <br>pi/Desktop/pi-rainbow-hearts [[[ DOUBLE CHECK THIS ]]]</div>
+            <div class="well well-sm"><strong>$</strong> pwd <br>/home/pi/Desktop/pi-rainbow-hearts</div>
 
             <p>Now that we're in the directory for the Rainbow Hearts project, we need to create a Python file to put our code in.</p>
 
             <div class="well well-sm"><strong>$</strong> touch hearts.py</div>
 
-            <p>Let's open this file with the Raspberry Pi's built-in Python 3 IDLE, like so:</p>
+            <p>We can verify that our new file was actually created by running the <span id="highlight">ls</span> command (that's lowercase L, by the way). You should see a filed called <span id="highlight">hearts.py</span> print to your Terminal.</p>
 
-            <div class="well well-sm"><strong>$</strong> [[[ DOUBLE CHECK THIS ]]]</div>
+            <div class="well well-sm"><strong>$</strong> ls
+            <br />
+            hearts.py
+            </div>
 
-            <p>Voila! Now we're ready to write some code! We need to import two modules: 1) The SenseHAT library, so we can interact with the SenseHAT, and 2) The Time library, so we can have our hearts flash on the LED matrix for a specified amount of time: </p>
+            <p>Let's open this file with the Raspberry Pi's built-in Python 3 IDLE. Click on the RaspberryPi logo in the upper left corner, then click on the "Programming" tab that appears, then click on the "Python 3 IDLE" choice that appears. Note that your options may be in a different order or location based on the operating system you installed! But don't worry, whatever you installed definitely has the Python 3 IDLE. You may need to look around for it.</p>
+
+            <p>Once you're in the Python 3 IDLE, you need to open the <span id="highlight">hearts.py file.</p>
+
+            <ol>
+              <li>
+                Click the "File" menu, then click "Open".
+              </li>
+
+              <li>
+                Double click on the Desktop folder.
+              </li>
+
+              <li>
+                Double-click on the pi-rainbow-hearts folder.
+              </li>
+
+              <li>
+                Finally, select the <span id="highlight">hearts.py</span> file and click on the "Open" button.
+              </li>
+            </ol>
+
+            <p>
+              A new (empty) window should appear, which is where we will write our Python program!
+            </p>
+
+            <p>In this window that we just opened, which is actually our <span id="highlight">hearts.py</span> file, we need to import two modules: 1) The SenseHAT library, so we can interact with the SenseHAT, and 2) The Time library, so we can have our hearts flash on the LED matrix for a specified amount of time. Accomplish this by typing the following code into the file: </p>
 
             <div class="well well-sm">
                 <em># hearts.py</em>
@@ -143,7 +171,7 @@
 
             Along with methods, objects can also have special characteristics which we call "attributes". For example, if we created a "Dog" object, the object might have attributes such as "breed" or "weight". We can store values inside these attributes, so in this example we could set<br> Dog.breed = "Golden Retriever"
 
-            <br><br> 
+            <br><br>
 
             Let's get back to the topic of writing Python code so we can interact with our SenseHAT. The LEDs are quite bright, so to make them a little dimmer, we can change the SenseHat object's "low_light" attribute to True (the default is False), as shown below:</p>
 
@@ -163,9 +191,9 @@
 
             <br><br>
 
-            Now's a good time to save your file.</p>
+            Now's a good time to save your file, either by holding down the < Ctrl > key and then the < s > key, or by opening the File menu and clicking on "Save..."</p>
 
-            <p><em><style>font-size="1em"</style>If the topics of objects, methods and attributes are confusing right now, don't worry! You can still have fun and complete this tutorial even if you skip the stuff about objects. Keep going!</em></p>
+            <p><em>If the topics of objects, methods and attributes are confusing right now, don't worry! You can still have fun and complete this tutorial even if you skip the stuff about objects. Keep going!</em></p>
 
             <br>
 
@@ -175,7 +203,7 @@
 
             <br>
 
-            <p>RGB is a way of creating colors by mixing very specific quantities of red, green and blue. Each color (red, green or blue) can have a quantity, or concentration, of up to 255. For example, the RGB value for <span id="red">red</span> is (255, 0, 0) because we list the concentrations in (RGB) order, and pure red will have no green or blue in it. This means there's a 100% concentration of red and a 0% concentration of the other colors. Likewise, the color <span id="green">green</span> would have an RGB value of (0, 255, 0) and the color <span id="blue">blue</span> would have an RGB value of (0, 0, 255). 
+            <p>RGB is a way of creating colors by mixing very specific quantities of red, green and blue. Each color (red, green or blue) can have a quantity, or concentration, of up to 255. For example, the RGB value for <span id="red">red</span> is (255, 0, 0) because we list the concentrations in (RGB) order, and pure red will have no green or blue in it. This means there's a 100% concentration of red and a 0% concentration of the other colors. Likewise, the color <span id="green">green</span> would have an RGB value of (0, 255, 0) and the color <span id="blue">blue</span> would have an RGB value of (0, 0, 255).
 
             <br><br>
 
@@ -183,7 +211,16 @@
 
             <br><br>
 
-            To use the rainbow colors, copy and paste this Python code into your <em>hearts.py</em> file, <strong>under the code we have already written.</strong> Remember, the lines of code that begin with the # sign will not be run. It's considered good practice in the programming world to use enough comments so that someone else reading your code will be able easily figure out what you are trying to do. So, we're using comments to make a note of what colors the RGB values will create.</p>
+            To use the rainbow colors, copy and paste this Python code into your <span id="highlight">hearts.py</span> file, <strong>under the code we have already written.</strong>
+            <br /><br />
+
+            Remember, the lines of code that begin with the # sign will not be run. In our case, we are writing these comments to remind ourselves which color is being coded in the line below.
+
+            <br /><br />
+
+            Normally, we'd want to use variable names that are as descriptive as possible (full color names, in our case). If our variable names are really descriptive, we don't have to write comments about them! The reason we're only using 1 or 2 characters as variable names is because we're going to create lists that hold these colors in the shape of our 8x8 LED matrix. Using single characters allows us to present the lists in a near-square pattern, which mirrors the LED matrix. If we were to use the full color names, our lists would appear as long rectangles instead. It wouldn't be as easy to understand at-a-glance which of our LED bulbs are going to light up and which are not.</p>
+
+            <br />
 
             <div class="well well-sm">
                 <em># Create variables to hold each RGB color we want to use</em>
@@ -229,7 +266,7 @@
 
             <br><br>
 
-            In the code above, we are creating a new and unique variable name for each color. To keep our variable names short, we are using just the first letter of each color (with the exception of purple, because the color pink already took the "p"). Each variable stores that color's RGB value as a tuple.  
+            In the code above, we are creating a new and unique variable name for each color. To keep our variable names short, we are using just the first letter of each color (with the exception of purple, because the color pink already took the "p"). Each variable stores that color's RGB value as a tuple.
 
             <br><br>
 
@@ -252,9 +289,9 @@
             <br><br>
 
             The way we do this is with a list that contains 64 values inside of it -- one value per LED! Now, just observe the following code snippet (don't put this into <em> hearts.py</em>.) We could code a Python list with 64 values in it like this:</p>
-            
+
             <div class="well well-sm">
-                <strong>led_list</strong> <span id="orange">=</span> [o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o] 
+                <strong>led_list</strong> <span id="orange">=</span> [o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o, o]
             </div>  <!-- end well -->
 
             <p>But this way of doing it would make it hard to see at a glance what our picture would turn out like, because the data telling which LEDs to light up is basically in one straight line. This is fine for the computer, but not so friendly for humans. <a href="https://www.tutorialspoint.com/python/python_lists.htm" target="_blank">Read more about Python lists</a>.]
@@ -273,7 +310,7 @@
                 o, o, o, o, o, o, o, o,<br>
                 o, o, o, o, o, o, o, o,<br>
                 o, o, o, o, o, o, o, o<br>
-                ] 
+                ]
             </div>  <!-- end well -->
 
             <p>That is so much easier to read AND we'll get a better idea of the picture that is taking shape on the LED matrix, since the shape of the list resembles the surface area made by the 64 LEDs.
@@ -288,7 +325,7 @@
 
             <br>
 
-            <p>We can now create a variable that will hold a list, and this list will hold the 64 LED values just as we saw above. Looking back to the code you wrote in your <em>hearts.py</em> file which assigned RGB values to different variables, we see that the variable "e" means "empty" (or no color) and the variable "r" means "red". 
+            <p>We can now create a variable that will hold a list, and this list will hold the 64 LED values just as we saw above. Looking back to the code you wrote in your <span id="highlight">hearts.py</span> file which assigned RGB values to different variables, we see that the variable "e" means "empty" (or no color) and the variable "r" means "red".
 
             <br><br>
 
@@ -304,7 +341,7 @@
                 e, r, r, r, r, r, e, e,<br>
                 e, e, r, r, r, e, e, e,<br>
                 e, e, e, r, e, e, e, e<br>
-                ] 
+                ]
             </div>  <!-- end well -->
 
             <p>Take a minute to walk through both the grid with the heart in it and the <span id="highlight">red_heart</span> list. Notice that each blank space in the grid is represented by an "e" in the <span id="highlight">red_heart</span> list, and each red space in the grid is represented by an "r" in the <span id="highlight">red_heart</span> list. Notably, the entire top row and the entire far-right column are both empty, meaning none of those LEDs will light up.
@@ -425,7 +462,7 @@
 
             <br><br>
 
-            One strategy we could use is to use a for-loop to loop through all of our <span id="highlight">&lt;color&gt;_heart</span> variables (which hold the data about which LEDs to turn on) and have each heart light up one by one. To do this, we need to create a new variable that's going to hold a list of all of the <span id="highlight">&lt;color&gt;_heart</span> variables inside. 
+            One strategy we could use is to write a for-loop to iterate through all of our <span id="highlight">&lt;color&gt;_heart</span> variables (which hold the data about which LEDs to turn on) and have each heart light up one by one. To do this, we need to create a new variable that's going to hold a list of all of the <span id="highlight">&lt;color&gt;_heart</span> variables inside.
 
             <br><br>
 
@@ -458,12 +495,12 @@
                 <li>Line 4 makes the LEDs stay on for 1 second.</li>
                 <li>Lines 3 & 4 will repeat for each color you have in your "heart_colors" list.</li>
                 <li>Line 5 is a comment.</li>
-                <li>Line 6 turns off the LEDs once the for-loop has run for each color you created. We know it runs after the for-loop because it is at the same indentation level as the for-loop.</li>
+                <li>Line 6 turns off the LEDs once the for-loop has run for each color you created. We know it runs after the for-loop because it is at the same indentation level as the for-loop, and not inside of it like lines 3 and 4 are.</li>
             </ul>
 
             <br>
 
-            <p>We only have one more line of code we need to write! We need to call the rainbow_hearts function, so that all the code inside it will be run by the <span id="highlight">hearts.py</span> file. If we don't call the function, our LEDs won't light up. Add this line of code to the very end of your file, and then save it:</p>
+            <p>We only have one more line of code we need to write! We need to <strong>call</strong> the <span id="highlight">rainbow_hearts</span> function, so that all the code inside it will be run by the <span id="highlight">hearts.py</span> file. So far, all we've done is <strong>define</strong> the <span id="highlight">rainbow_hearts</span> function. If we don't tell Python that it's OK to run the function, our LEDs won't light up. Add this line of code to the very end of your file, and then save it:</p>
 
             <div class="well well-sm">
                 rainbow_hearts()
@@ -473,14 +510,23 @@
 
             <h3 id="run-your-file">Run Your File</h3>
 
-            <p>Now that our file is complete, we need to run it in order to make the LEDs display our colorful hearts. Open the Raspberry Pi's Terminal. Navigate to the directory that contains the <span id="highlight">hearts.py</span> file, and run the file:</p>
+            <p>Now that our file is complete, we need to run it in order to make the LEDs display our colorful hearts. Go back to the window showing the Raspberry Pi's Terminal and run the file by typing in this command:</p>
 
             <div class="well well-sm">
-                <strong>$</strong> cd pi/Desktop/pi-rainbow-hearts<br>
                 <strong>$</strong> python3 hearts.py
             </div>  <!-- end well -->
 
+            <p>If your Terminal is not still running from the session we started at the beginning of this tutorial, navigate to the directory that contains the <span id="highlight">hearts.py</span> file by typing in this command, then try running the file:</p>
+
+              <div class="well well-sm">
+                  <strong>$</strong> cd pi/Desktop/pi_rainbow_hearts/hearts.py
+                  <br />
+                  <strong>$</strong> python3 hearts.py
+              </div>  <!-- end well -->
+
             <br>
+
+            <iframe src="https://giphy.com/embed/Q2wCxfrvyTUm4" width="480" height="478" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/greys-anatomy-meredith-grey-bailey-Q2wCxfrvyTUm4">via GIPHY</a></p>
 
             <h3 id="whats-next">What's Next?</h3>
 
