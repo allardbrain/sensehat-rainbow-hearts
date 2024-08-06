@@ -29,7 +29,7 @@ red_heart = [
      e, r, r, r, r, r, e, e,
      e, e, r, r, r, e, e, e,
      e, e, e, r, e, e, e, e
-     ]
+]
 
 pink_heart = [
      e, e, e, e, e, e, e, e,
@@ -40,7 +40,7 @@ pink_heart = [
      e, p, p, p, p, p, e, e,
      e, e, p, p, p, e, e, e,
      e, e, e, p, e, e, e, e
-     ]
+]
 
 orange_heart = [
      e, e, e, e, e, e, e, e,
@@ -51,7 +51,7 @@ orange_heart = [
      e, o, o, o, o, o, e, e,
      e, e, o, o, o, e, e, e,
      e, e, e, o, e, e, e, e
-     ]
+]
 
 yellow_heart = [
      e, e, e, e, e, e, e, e,
@@ -62,7 +62,7 @@ yellow_heart = [
      e, y, y, y, y, y, e, e,
      e, e, y, y, y, e, e, e,
      e, e, e, y, e, e, e, e
-     ]
+]
 
 green_heart = [
      e, e, e, e, e, e, e, e,
@@ -73,7 +73,7 @@ green_heart = [
      e, g, g, g, g, g, e, e,
      e, e, g, g, g, e, e, e,
      e, e, e, g, e, e, e, e
-     ]
+]
 
 aqua_heart = [
      e, e, e, e, e, e, e, e,
@@ -84,7 +84,7 @@ aqua_heart = [
      e, a, a, a, a, a, e, e,
      e, e, a, a, a, e, e, e,
      e, e, e, a, e, e, e, e
-     ]
+]
 
 blue_heart = [
      e, e, e, e, e, e, e, e,
@@ -95,7 +95,7 @@ blue_heart = [
      e, b, b, b, b, b, e, e,
      e, e, b, b, b, e, e, e,
      e, e, e, b, e, e, e, e
-     ]
+]
 
 purple_heart = [
      e, e, e, e, e, e, e, e,
@@ -106,10 +106,18 @@ purple_heart = [
      e, pr, pr, pr, pr, pr, e, e,
      e, e, pr, pr, pr, e, e, e,
      e, e, e, pr, e, e, e, e
-     ]
+]
 
-heart_colors = [red_heart, pink_heart, orange_heart, yellow_heart,
-                green_heart, aqua_heart, blue_heart, purple_heart]
+heart_colors = [
+    red_heart,
+    pink_heart,
+    orange_heart,
+    yellow_heart,
+    green_heart,
+    aqua_heart,
+    blue_heart,
+    purple_heart
+]
 
 def rainbow_hearts():
 
@@ -119,6 +127,7 @@ def rainbow_hearts():
 
     # Clear the LED display
     sense.clear()
+    return
 
 rainbow_hearts()
 
